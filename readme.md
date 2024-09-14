@@ -3,5 +3,5 @@
 #### 第一次实验
 
 * 顺序表
-  * [顺序表的 12 种操作函数的与头文件](https://github.com/serendipity565/CCNU-Data-Structures/blob/main/esp1/SQListFunction.cpp)
+  * [顺序表的 12 种操作函数以及顺序表扩容的头文件](https://github.com/serendipity565/CCNU-Data-Structures/blob/main/esp1/SQListFunction.cpp)
   * [用顺序表求两个集合的交集](https://github.com/serendipity565/CCNU-Data-Structures/blob/main/esp1/SetFunction.cpp)

@@ -1,4 +1,4 @@
-#include "SQList.h"
+#include "head.h"
 #include "SQListFunction.cpp"
 #include "SetFunction.cpp"
 

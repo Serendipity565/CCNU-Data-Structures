@@ -1,4 +1,4 @@
-#include "SQList.h"
+#include "head.h"
 
 #ifndef SQListFunction
 #define SQListFunction
