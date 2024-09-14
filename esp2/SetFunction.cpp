@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// 两个链表简单相加
 void SetUnion(LinkList &A, LinkList B)
 {
     LNode *p;
@@ -29,6 +30,7 @@ void SetUnion(LinkList &A, LinkList B)
     return;
 }
 
+// 集合去重
 void SetPrue(LinkList &A)
 {
     if (A == NULL || A->next == NULL)
