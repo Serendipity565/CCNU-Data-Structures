@@ -44,6 +44,20 @@ void ClearList(LinkList &L)
     }
 }
 
+// 计算链表长度
+int ListLength(LinkList L)
+{
+    LNode *p;
+    p = L->next;
+    int cnt = 0;
+    while (p != NULL)
+    {
+        p = p->next;
+        cnt++;
+    }
+    return cnt;
+}
+
 // 判断链表是否为空
 bool ListEmpty(LinkList L)
 {
