@@ -141,9 +141,53 @@ LNode *FindFirstCommonNode(LinkList A, LinkList B)
     return ans;
 }
 
+// 链表递增排序
+void ListSort(LinkList &L)
+{
+    LNode *p = L->next;
+    LNode *q = L->next;
+}
+
+// 合并两个递增链表
 void LNodeMerge(LinkList &A, LinkList B)
 {
     Lnode *p, *q;
+    p=A->next;
+    q=B->next;
+    while(p!=NULL&&q!=NULL)
+    {
+        if(p->data>q->data)
+        {
+            LNode *s=(LNode *)malloc(sizeof(LNode));
+            s->data=q->data;
+            s->next=p->next;
+            p->next=s;
+            p=p->next;
+            q=q->next;
+        }
+        else if (p->data<q->data)
+        {
+            p=p->next;
+        }
+        else
+        {
+            continue;
+        }
+    }
+    while(p!=NULL)
+    {
+        p=p->next;
+    }
+    while(q!=NULL)
+    {
+        LNode *s=(LNode *)malloc(sizeof(LNode));
+        s->data=q->data;
+        s->next=p->next;
+        p->next=s;
+        p=p->next;
+        q=q->next;
+    }
+    return;
 }
 
 // 输出链表的每个元素
