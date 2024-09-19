@@ -16,7 +16,7 @@ typedef struct Lnode
 void InitList(LinkList &L)
 {
     L = (LinkList)malloc(sizeof(LNode));
-    L->data = NULL;
+    L->data = 0;
     L->next = nullptr;
 }
 
@@ -27,7 +27,7 @@ void DestroyList(LinkList &L)
     while (L != NULL)
     {
         p = L->next;
-        delete L;
+        free(L);
         L = p;
     }
 }
@@ -80,6 +80,10 @@ void ListHeadInsert(LinkList &L, ElemType x)
     {
         return;
     }
+    if (p == NULL)
+    {
+        return;
+    }
     p->data = x;
     p->next = L->next;
     L->next = p;
@@ -99,6 +103,10 @@ void ListTailInsert(LinkList &L, ElemType x)
     }
 
     s = (LinkList)malloc(sizeof(LNode));
+    if (s == NULL)
+    {
+        return;
+    }
     s->data = x;
     s->next = NULL;
     p->next = s;
@@ -106,15 +114,13 @@ void ListTailInsert(LinkList &L, ElemType x)
 }
 
 // 查找第i个元素
-ElemType GetElem(LinkList L, int i)
+bool GetElem(LinkList L, int i, ElemType &e)
 {
-    LNode *p;
-    ElemType e;
-    p = L->next;
+    LNode *p = L->next;
     int count = 1;
     if (i < 1)
     {
-        return e;
+        return false;
     }
     while (p != NULL && count < i)
     {
@@ -124,12 +130,12 @@ ElemType GetElem(LinkList L, int i)
     if (count == i && p != NULL)
     {
         e = p->data;
+        return true;
     }
     else
     {
-        e = NULL;
+        return false;
     }
-    return e;
 }
 
 // 查找第i个节点
@@ -179,8 +185,17 @@ int LocateElem(LinkList L, ElemType e)
 // 返回该节点的后i个元素
 bool NextElem(LNode *p, int i, ElemType &e)
 {
-
     if (p == NULL)
+    {
+        return false;
+    }
+
+    if (i == 0)
+    {
+        e = p->data;
+        return true;
+    }
+    else if (i < 0)
     {
         return false;
     }
@@ -206,14 +221,13 @@ bool NextElem(LNode *p, int i, ElemType &e)
 // 输出链表的每个元素
 void LNodeTraverse(LinkList L)
 {
-    LNode *p;
+    LNode *p = L->next;
     ElemType e;
-    p = L;
-    while (p->next != NULL)
+    while (p != NULL)
     {
-        p = p->next;
         e = p->data;
         cout << e << " ";
+        p = p->next;
     }
     cout << endl;
 }

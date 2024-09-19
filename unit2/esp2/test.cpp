@@ -29,7 +29,15 @@ int main()
     LNodeTraverse(L);
 
     // 查找第3个元素
-    cout << "第3个元素为:" << GetElem(L, 3) << endl;
+    ElemType el;
+    if (GetElem(L, 3, el))
+    {
+        cout << "第3个元素为:" << el << endl;
+    }
+    else
+    {
+        cout << "错误" << endl;
+    }
 
     // 获取第5个节点
     LNode *n;
