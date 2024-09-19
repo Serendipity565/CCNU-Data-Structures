@@ -38,8 +38,14 @@ int main()
     // e = p->data;
     // cout << e << endl;
     //  输出第5个节点后2个的元素
-    e = NextElem(n, 2);
-    cout << "第5个节点后2个的元素:" << e << endl;
+    if (NextElem(n, 2, e))
+    {
+        cout << "第5个节点后2个的元素:" << e << endl;
+    }
+    else
+    {
+        cout << "错误" << endl;
+    }
 
     // 查找元素第一次出现的位置
     cout << "元素1第一次出现的位置:" << LocateElem(L, 1) << endl;

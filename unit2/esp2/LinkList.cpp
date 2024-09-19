@@ -17,7 +17,7 @@ void InitList(LinkList &L)
 {
     L = (LinkList)malloc(sizeof(LNode));
     L->data = NULL;
-    L->next = NULL;
+    L->next = nullptr;
 }
 
 // 删除整个链表
@@ -71,21 +71,6 @@ bool ListEmpty(LinkList L)
     }
 }
 
-// 返回链表长度
-int ListLength(LinkList L)
-{
-    LNode *p;
-    p = L->next;
-
-    int count = 0;
-    while (p != NULL)
-    {
-        count++;
-        p = p->next;
-    }
-    return count;
-}
-
 // 头插法
 void ListHeadInsert(LinkList &L, ElemType x)
 {
@@ -129,7 +114,6 @@ ElemType GetElem(LinkList L, int i)
     int count = 1;
     if (i < 1)
     {
-        e = NULL;
         return e;
     }
     while (p != NULL && count < i)
@@ -193,12 +177,12 @@ int LocateElem(LinkList L, ElemType e)
 }
 
 // 返回该节点的后i个元素
-ElemType NextElem(LNode *p, int i)
+bool NextElem(LNode *p, int i, ElemType &e)
 {
 
     if (p == NULL)
     {
-        return NULL;
+        return false;
     }
 
     int count = 0;
@@ -210,11 +194,12 @@ ElemType NextElem(LNode *p, int i)
 
     if (p != NULL)
     {
-        return p->data;
+        e = p->data;
+        return true;
     }
     else
     {
-        return NULL;
+        return false;
     }
 }
 
