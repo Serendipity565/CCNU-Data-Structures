@@ -15,8 +15,8 @@ typedef struct Lnode
 //  初始化链表（头节点）
 void InitList(LinkList &L)
 {
-    L = (LinkList)malloc(sizeof(LNode));
-    L->data = NULL;
+    L = new LNode;
+    L->data = 0;
     L->next = NULL;
 }
 
@@ -92,6 +92,29 @@ void ListTailInsert(LinkList &L, ElemType x)
     return;
 }
 
+// 找到第i个节点
+LNode *GetNode(LinkList L, int i)
+{
+    LNode *p;
+    p = L;
+    int count = 0;
+    while (p != NULL && count < i)
+    {
+        p = p->next;
+        count++;
+    }
+    if (count == i && p != NULL)
+    {
+        return p;
+    }
+    else
+    {
+        p = NULL;
+        return p;
+    }
+}
+
+// 找到公共节点
 LNode *FindFirstCommonNode(LinkList A, LinkList B)
 {
     LNode *pA = A->next, *pB = B->next;
@@ -121,73 +144,90 @@ LNode *FindFirstCommonNode(LinkList A, LinkList B)
         }
     }
 
-    // temp位于不同元素的下一个，时间复杂度为 O(n)
     LNode *ans = NULL;
-    LNode *temp = pA;
     while (pA != NULL && pB != NULL)
     {
-        if (pA->data == pB->data)
+        if (pA == pB)
         {
-            ans = temp;
-        }
-        else
-        {
-            temp = pA->next;
+            return pA;
         }
         pA = pA->next;
         pB = pB->next;
     }
 
-    return ans;
+    return NULL;
 }
 
 // 链表递增排序
 void ListSort(LinkList &L)
 {
-    LNode *p = L->next;
-    LNode *q = L->next;
+    if (L == NULL || L->next == NULL)
+    {
+        return;
+    }
+
+    LNode *sorted = NULL;
+    LNode *current = L->next;
+
+    while (current != NULL)
+    {
+        LNode *next = current->next;
+
+        if (sorted == NULL || sorted->data >= current->data)
+        {
+            current->next = sorted;
+            sorted = current;
+        }
+        else
+        {
+            LNode *temp = sorted;
+            while (temp->next != NULL && temp->next->data < current->data)
+            {
+                temp = temp->next;
+            }
+            current->next = temp->next;
+            temp->next = current;
+        }
+
+        current = next;
+    }
+
+    L->next = sorted;
 }
 
 // 合并两个递增链表
 void LNodeMerge(LinkList &A, LinkList B)
 {
-    Lnode *p, *q;
-    p=A->next;
-    q=B->next;
-    while(p!=NULL&&q!=NULL)
+    LNode *p = A;
+    LNode *q = B->next;
+
+    // 合并两个链表
+    while (p->next != NULL && q != NULL)
     {
-        if(p->data>q->data)
+        if (p->next->data > q->data)
         {
-            LNode *s=(LNode *)malloc(sizeof(LNode));
-            s->data=q->data;
-            s->next=p->next;
-            p->next=s;
-            p=p->next;
-            q=q->next;
-        }
-        else if (p->data<q->data)
-        {
-            p=p->next;
+            LNode *s = new LNode;
+            s->data = q->data;
+            s->next = p->next;
+            p->next = s;
+            p = p->next;
+            q = q->next;
         }
         else
         {
-            continue;
+            p = p->next;
         }
     }
-    while(p!=NULL)
+
+    while (q != NULL)
     {
-        p=p->next;
+        LNode *s = new LNode;
+        s->data = q->data;
+        s->next = NULL;
+        p->next = s;
+        p = p->next;
+        q = q->next;
     }
-    while(q!=NULL)
-    {
-        LNode *s=(LNode *)malloc(sizeof(LNode));
-        s->data=q->data;
-        s->next=p->next;
-        p->next=s;
-        p=p->next;
-        q=q->next;
-    }
-    return;
 }
 
 // 输出链表的每个元素
