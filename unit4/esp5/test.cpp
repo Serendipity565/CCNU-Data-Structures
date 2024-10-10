@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool check(const vector<int> &pushSeq, const vector<int> &popSeq)
+bool check(vector<int> &pushSeq, vector<int> &popSeq)
 {
     SqStack S;
     InitStack(S);

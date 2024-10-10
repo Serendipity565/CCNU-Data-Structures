@@ -35,3 +35,12 @@
 * [头文件](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit3/esp4/head.h)
 * [操作函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit3/esp4/LinkList.cpp)
 * [主函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit3/esp4/test.cpp)
+
+## 第四单元：栈和队列
+
+### 第五次实验：栈的实现与应用（判断出入栈顺序是否成立）
+
+* 顺序栈
+* [头文件](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp5/head.h)
+* [栈相关函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp5/StackFunction.cpp)
+* [主函数实现应用](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp5/test.cpp)
