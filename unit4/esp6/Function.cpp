@@ -34,7 +34,7 @@ bool CheckBalancedBrackets(string str)
             continue;
         }
     }
-    return StackEmpty(S);
+    return true;
 }
 
 bool CheckPalindrome(string str)

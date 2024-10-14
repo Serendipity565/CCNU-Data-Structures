@@ -28,11 +28,11 @@ int main()
 
     if (CheckBalancedBrackets(str3))
     {
-        cout << str3 << "：不配对" << endl;
+        cout << str3 << "：配对" << endl;
     }
     else
     {
-        cout << str3 << "：配对" << endl;
+        cout << str3 << "：不配对" << endl;
     }
 
     string str4 = "123654";
