@@ -53,3 +53,14 @@
 链栈
 
 * [链栈相关函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp5/LinkStackFunction.cpp)
+
+### 第六次实验
+
+1. 括号配对检测：编写一个程序，通过输入表达式字符串，判别其中的开闭括号是否配对。
+2. 回文检测：编写一个程序，通过输入表达式字符串，判别字符串是否是回文。
+3. 递归算法找最大最小值：线性表 A(1……，n)，元素是整数，写出递归算法，求 A 中的最大和最小元素。
+
+* [头文件](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp6/head.h)
+* [栈相关函数(与上次实验相同)](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp6/StackFunction.cpp)
+* [功能操作函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp6/Function.cpp)
+* [主函数实现](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp6/test.cpp)
