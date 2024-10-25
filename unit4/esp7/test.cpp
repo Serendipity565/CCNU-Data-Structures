@@ -122,9 +122,19 @@ int main()
     DestroyQueue(q);
     cout << "队列已销毁." << endl;
 
-    vector<int> nums = {1, 2, 3, 2, 1};
-    int maxDiff = findMaxIndexDifference(nums);
-    cout << "最大序号差: " << maxDiff << endl;
+    cout << endl;
+
+    vector<int> nums1 = {1, 2, 3, 2, 1};
+    int maxDiff = findMaxIndexDifference(nums1);
+    cout << "nums1最大序号差: " << maxDiff << endl;
+
+    vector<int> nums2 = {1, 2, 0, 2, 1};
+    maxDiff = findMaxIndexDifference(nums2);
+    cout << "nums2最大序号差: " << maxDiff << endl;
+
+    vector<int> nums3 = {1, 1, 1, 2, 1};
+    maxDiff = findMaxIndexDifference(nums3);
+    cout << "num3最大序号差: " << maxDiff << endl;
 
     return 0;
 }
