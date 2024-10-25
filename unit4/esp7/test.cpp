@@ -22,8 +22,10 @@ int findMaxIndexDifference(vector<int> &nums)
     }
 
     // 遍历每个队列，计算最大序号差
-    for (auto &[x, pos] : lastIndex)
+    for (auto &pair : lastIndex)
     {
+        int x = pair.first;
+        DouQueue &pos = pair.second;
         if (QueueLength(pos) > 1)
         {
             int first;
