@@ -24,14 +24,16 @@ int findMaxIndexDifference(vector<int> &nums)
     // 遍历每个队列，计算最大序号差
     for (auto &[x, pos] : lastIndex)
     {
-        while (QueueLength(pos) > 1)
+        if (QueueLength(pos) > 1)
         {
             int first;
             DeQueueHead(pos, first);
             int second;
+
             while (QueueLength(pos) > 0)
             {
                 GetHead(pos, second);
+
                 bool judge = true;
                 for (int k = first + 1; k < second; ++k)
                 {
@@ -41,9 +43,14 @@ int findMaxIndexDifference(vector<int> &nums)
                         break;
                     }
                 }
+
                 if (judge)
                 {
                     ans = max(ans, second - first);
+                }
+                else
+                {
+                    first = second;
                 }
                 DeQueueHead(pos, second);
             }
@@ -132,7 +139,7 @@ int main()
     maxDiff = findMaxIndexDifference(nums2);
     cout << "nums2最大序号差: " << maxDiff << endl;
 
-    vector<int> nums3 = {1, 1, 1, 2, 1};
+    vector<int> nums3 = {1, 0, 1, 2, 1};
     maxDiff = findMaxIndexDifference(nums3);
     cout << "num3最大序号差: " << maxDiff << endl;
 
