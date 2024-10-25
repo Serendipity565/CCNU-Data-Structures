@@ -64,3 +64,14 @@
 * [栈相关函数(与上次实验相同)](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp6/StackFunction.cpp)
 * [功能操作函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp6/Function.cpp)
 * [主函数实现](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp6/test.cpp)
+
+### 第七次实验
+
+1. 循环队列的表示与实现
+2. 双端队列的表示与实现
+3. 应用：已知n个整数，序号从1开始，在这n个数中存在满足如下条件的两个数：两个数相等，且它们之间的数不小于这两个数，在这n个数中可能存在多组满足上述条件的两个数，请设计算法找出满足上述条件的两个数序号之差的最大数。例如在(1，2，3，2，1)中，满足条件的两组数(1，1)和(2，2)，序号之差的最大值是4。
+
+* [头文件](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp7/head.h)
+* [循环队列](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp7/SeQueueFunction.cpp)
+* [双端队列](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp7/DeQueueFunction.cpp)
+* [主函数及应用的实现函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp7/test.cpp)
