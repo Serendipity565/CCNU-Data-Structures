@@ -77,3 +77,9 @@
 * [循环队列](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp7/SeQueueFunction.cpp)
 * [双端队列](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp7/DeQueueFunction.cpp)
 * [主函数及应用的实现函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp7/test.cpp)
+
+### 第八次实验
+
+1. 堆栈的应用:中缀表达式求值
+
+* [主函数及应用的实现函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp8/test.cpp)
