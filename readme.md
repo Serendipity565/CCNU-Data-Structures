@@ -92,3 +92,12 @@
 * [循环队列](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp9/SeQueueFunction.cpp)(在第七次实验的循环队列上对遍历队列`QueueTraverse`进行修改，并删去放入队列元素`EnQueue`的自动扩容功能)
 * [栈](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp9/StackFunction.cpp)(在第七次实验的循环队列上对遍历队列`StackTraverse`进行修改，并删去放入栈顶元素`Push`的自动扩容功能)
 * [主函数及应用的实现函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp9/test.cpp)
+
+### 第十次实验
+
+二叉树（链式）
+
+* [头文件](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp9/head.h)
+* [循环队列](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp9/SeQueueFunction.cpp)(在第七次实验的循环队列上对遍历队列`QueueTraverse`进行修改，并删去放入队列元素`EnQueue`的自动扩容功能)
+* [栈](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp9/StackFunction.cpp)(在第七次实验的循环队列上对遍历队列`StackTraverse`进行修改，并删去放入栈顶元素`Push`的自动扩容功能)
+* [主函数及应用的实现函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/unit4/esp9/test.cpp)
