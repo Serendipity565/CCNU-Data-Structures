@@ -115,6 +115,8 @@ int main()
     LevelTraverse(T);
     cout << endl;
 
+    cout << "======================================" << endl;
+
     DestroyBiTree(T);
     cout << "摧毁树,程序结束" << endl;
 
