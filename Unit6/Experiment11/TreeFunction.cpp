@@ -5,8 +5,7 @@
 
 using namespace std;
 
-typedef int TElemType;
-typedef int ElemType;
+typedef char TElemType;
 
 struct BiTreeNode
 {
@@ -54,7 +53,7 @@ int BiTreeDepth(BiTree T)
 }
 
 // 返回父节点
-ElemType Parent(BiTree T, ElemType e)
+TElemType Parent(BiTree T, TElemType e)
 {
     if (T == nullptr)
     {
@@ -65,7 +64,7 @@ ElemType Parent(BiTree T, ElemType e)
         return T->data;
     }
 
-    ElemType p = Parent(T->lchild, e);
+    TElemType p = Parent(T->lchild, e);
     if (p != -1)
     {
         return p;
@@ -75,7 +74,7 @@ ElemType Parent(BiTree T, ElemType e)
 }
 
 // 返回左子节点
-ElemType LeftChild(BiTree T, ElemType e)
+TElemType LeftChild(BiTree T, TElemType e)
 {
     if (T == nullptr)
     {
@@ -86,7 +85,7 @@ ElemType LeftChild(BiTree T, ElemType e)
         return (T->lchild) ? T->lchild->data : -1;
     }
 
-    ElemType res = LeftChild(T->lchild, e);
+    TElemType res = LeftChild(T->lchild, e);
     if (res != -1)
     {
         return res;
@@ -96,7 +95,7 @@ ElemType LeftChild(BiTree T, ElemType e)
 }
 
 // 返回右子节点
-ElemType RightChild(BiTree T, ElemType e)
+TElemType RightChild(BiTree T, TElemType e)
 {
     if (T == nullptr)
     {
@@ -107,7 +106,7 @@ ElemType RightChild(BiTree T, ElemType e)
         return (T->rchild) ? T->rchild->data : -1;
     }
 
-    ElemType res = RightChild(T->lchild, e);
+    TElemType res = RightChild(T->lchild, e);
     if (res != -1)
     {
         return res;
@@ -117,20 +116,20 @@ ElemType RightChild(BiTree T, ElemType e)
 }
 
 // 返回左兄弟节点
-ElemType LeftSibling(BiTree T, ElemType e)
+TElemType LeftSibling(BiTree T, TElemType e)
 {
     if (T == nullptr || T->data == e)
     {
         return -1;
     }
 
-    ElemType res = Parent(T, e);
+    TElemType res = Parent(T, e);
     if (res == -1)
     {
         return -1;
     }
 
-    ElemType ans = LeftChild(T, res);
+    TElemType ans = LeftChild(T, res);
     if (ans == -1)
     {
         return -1;
@@ -140,20 +139,20 @@ ElemType LeftSibling(BiTree T, ElemType e)
 }
 
 // 返回右兄弟节点
-ElemType RightSibling(BiTree T, ElemType e)
+TElemType RightSibling(BiTree T, TElemType e)
 {
     if (T == nullptr || T->data == e)
     {
         return -1;
     }
 
-    ElemType res = Parent(T, e);
+    TElemType res = Parent(T, e);
     if (res == -1)
     {
         return -1;
     }
 
-    ElemType ans = RightChild(T, res);
+    TElemType ans = RightChild(T, res);
     if (ans == -1)
     {
         return -1;
@@ -164,7 +163,7 @@ ElemType RightSibling(BiTree T, ElemType e)
 
 // 插入子树
 // LR为0插左子树，为1插右子树
-bool InsertChild(BiTree &T, ElemType p, int LR, BiTree C)
+bool InsertChild(BiTree &T, TElemType p, int LR, BiTree C)
 {
     if (T == nullptr)
     {
@@ -202,7 +201,7 @@ bool InsertChild(BiTree &T, ElemType p, int LR, BiTree C)
 }
 
 // 删除子树
-bool DeleteChild(BiTree &T, ElemType p, int LR)
+bool DeleteChild(BiTree &T, TElemType p, int LR)
 {
     if (T == nullptr)
     {
