@@ -93,6 +93,16 @@
 * [栈](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit4/Experiment9/StackFunction.cpp)(在第七次实验的循环队列上对遍历队列`StackTraverse`进行修改，并删去放入栈顶元素`Push`的自动扩容功能)
 * [主函数及应用的实现函数](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit4/Experiment9/test.cpp)
 
+## 第五单元：串和数组
+
+### 稀疏矩阵
+
+1. 假设稀疏矩阵A和B(具有相同大小m*n)都采用三元组存储，编写程序计算C-A+B,要求C也采用三元组存储。
+
+* []()
+
+### 第十二次实验
+
 ## 第六单元：树
 
 ### 第十次实验
@@ -101,3 +111,5 @@
 
 * [二叉树(链式)](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment10/TreeFunction.cpp)
 * [主函数以及测试](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment10/test.cpp)
+
+### 第十一次实验
