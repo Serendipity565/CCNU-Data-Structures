@@ -97,9 +97,10 @@
 
 ### 稀疏矩阵
 
-1. 假设稀疏矩阵A和B(具有相同大小m*n)都采用三元组存储，编写程序计算C-A+B,要求C也采用三元组存储。
+1. 假设稀疏矩阵A和B(具有相同大小m*n)都采用三元组存储，编写程序计算C=A+B，要求C也采用三元组存储。
 
-* []()
+* [稀疏矩阵](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit5/Experiment12/MatricesFunction.cpp)
+* [主函数以及测试](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit5/Experiment12/test.cpp)
 
 ### 第十二次实验
 
@@ -113,3 +114,12 @@
 * [主函数以及测试](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment10/test.cpp)
 
 ### 第十一次实验
+
+1. 编写程序，根据给定先序遍历和中序遍历的结果创建二叉树。例如：先序遍历为ABCDEFGH，中序序列为CBEDFAGH，输出为后序遍历的结果为：CEFDBHGA
+2. 以二叉链表为二叉树的存储结构，交换二叉树每个节点的左孩子和右孩子。
+3. 编写程序，根据给定的字符序列（先序），创建二叉树，判断此二叉树是不是平衡二叉树。
+平衡二叉树定义：可以是空树；假如不是空树，任何一个结点的左子树与右子树都是平衡二叉树，并且高度之差的绝对值不超过 1。
+4. 已知二叉树采用二叉链表存储,编写程序据给定的字符序列（先序）生成二叉树，返回二叉树T的结点总数
+
+* [二叉树相关函数(同上一次实验)](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment11/TreeFunction.cpp)
+* [主函数、相关实现函数以及测试](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment11/test.cpp)
