@@ -123,3 +123,12 @@
 
 * [二叉树相关函数(同上一次实验)](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment11/TreeFunction.cpp)
 * [主函数、相关实现函数以及测试](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment11/test.cpp)
+
+### 第十三次实验
+
+1. 直观输出二叉树
+
+这里我提供了两种思路，一种是类似于终端查看文件夹的树状结构，另一种是将二叉树转换为数组，再打印数组以实现树的直观输出
+
+* [二叉树相关函数(同之前实验)](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment13/TreeFunction.cpp)
+* [实现函数以及测试](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment13/test.cpp)
