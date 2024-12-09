@@ -132,3 +132,23 @@
 
 * [二叉树相关函数(同之前实验)](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment13/TreeFunction.cpp)
 * [实现函数以及测试](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit6/Experiment13/test.cpp)
+
+### 第十四次实验
+
+1. 设计程序判断有n个节点的无头节点的单链表，是否存在环？若有环返回环的入口指针。如图所示为单链表，请查询是否有环，如果有环，返回指针P。
+2. 给定一个含 n（n≥1）个整数的数组，请设计一个在时间上尽可能高效的算法，找出数组中未出现的最小正整数。(考虑：n个元素的数组可以存放的最小的正整数是从1起到n止。)
+
+* [第一题](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit3/Experiment14/1.cpp)
+* [第二题](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit3/Experiment14/2.cpp)
+
+## 图
+
+### 第十五次实验
+
+1. 二叉树的带权路径长度(WPL)是二叉树中所有叶结点的带权路径长度之和。给定一棵二叉树T，采用二叉链表存储，结点结构为：其中叶结点的weight域保存该结点的非负权值。设root为指向T的根结点的指针，请设计求T的WPL的算法。
+2. 基于深度优先搜索策略设计算法，判别以邻接矩阵存储的有向图中是否存在由顶点vi到vj的路径(vi不等于vj)。
+3. 基于深度优先搜索策略设计算法，判别以邻接矩阵存储的有向图中是否存在由顶点vi到vj的路径(vi不等于vj)。
+
+* [第一题](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit7/Experiment15/1.cpp)
+* [第二题](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit7/Experiment15/2.cpp)
+* [第三题](https://github.com/Serendipity565/CCNU-Data-Structures/blob/main/Unit7/Experiment15/3.cpp)
